@@ -1007,7 +1007,7 @@ table img{
   position: relative;
   width: 100%;
   //background-color: transparent;
-  background-color: #FCCC4C;
+  background-color: #1a1a1a;
   z-index: 990;
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
@@ -1103,7 +1103,8 @@ table img{
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 20px;
-  color: #1D2228;
+  /*color: #1D2228;*/
+  color: white;
   font-weight: 600;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;

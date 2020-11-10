@@ -1046,6 +1046,7 @@ table img{
   cursor: pointer;
   margin: 20px 0;
   margin-left: 15px;
+
 }
 
 .aside-toggler span {
@@ -1054,7 +1055,7 @@ table img{
   width: 25px;
   height: 1px;
   border-radius: 3px;
-  background-color: #1D2228;
+  background-color: white;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;

@@ -39,6 +39,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MenuService} from "./services/menu.service";
+import {HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +75,7 @@ import {MatIconModule} from '@angular/material/icon';
     ErrorComponent,
     HeaderFourComponent,
     HeaderInnerComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -82,10 +84,10 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     MatTooltipModule,
     MatButtonModule,
-    MatIconModule
-    
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

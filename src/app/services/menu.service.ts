@@ -9,12 +9,20 @@ export class MenuService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts(){
+  getCategory(id){
     const headers = new HttpHeaders({
       Authorization: 'Basic ' + btoa('celil@gmail.com' + ':' + '1980'),
       Accept: 'application/json'
     });
-    return this.http.get<any>(this.BASE_URL + 'categories/getallwithproducts', {headers}).toPromise();
+    return this.http.get<any>(this.BASE_URL + 'categories/getallwithproducts?menuId=' + id, {headers}).toPromise();
+  }
+
+  getMenus(){
+    const headers = new HttpHeaders({
+      Authorization: 'Basic ' + btoa('celil@gmail.com' + ':' + '1980'),
+      Accept: 'application/json'
+    });
+    return this.http.get<any>(this.BASE_URL + 'menus/getall', {headers}).toPromise();
   }
 
 }

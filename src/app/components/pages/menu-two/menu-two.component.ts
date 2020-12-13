@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MenuService} from "../../../services/menu.service";
+import {Router} from "@angular/router";
+import {DomSanitizer, SafeHtml, SafeResourceUrl, SafeScript, SafeStyle, SafeUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-menu-two',
@@ -8,14 +10,30 @@ import {MenuService} from "../../../services/menu.service";
 })
 export class MenuTwoComponent implements OnInit {
   category: any;
+  menus: any;
+  product: any;
+  image: any;
 
-  constructor(private service: MenuService) { }
+  constructor(private service: MenuService,
+              private router: Router,
+              private sanitizer: DomSanitizer) {
+  }
 
   ngOnInit(): void {
-    this.service.getProducts().then((data) => {
+    this.service.getMenus().then((data) => {
+      this.menus = data;
+    });
+  }
+
+  getProducts(p){
+    this.service.getCategory(p.id).then((data) => {
       this.category = data;
-      console.log(this.category);
     })
+  }
+
+  getBackground(image) {
+    let img = 'https://' + image;
+    return this.sanitizer.bypassSecurityTrustStyle(`url(${img})`);
   }
 
 }

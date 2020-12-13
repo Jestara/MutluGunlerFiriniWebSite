@@ -41,6 +41,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MenuService} from "./services/menu.service";
 import {HttpClientModule} from "@angular/common/http";
+import {MaterialModule} from "./components/modules/material/material.module";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +87,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatTooltipModule,
     MatButtonModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

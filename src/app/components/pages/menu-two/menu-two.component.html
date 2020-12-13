@@ -1,59 +1,63 @@
 <app-header></app-header>
- <!-- Subheader Start -->
- <div class="subheader dark-overlay dark-overlay-2" style="background-image: url('assets/img/urunler.png')">
-    <div class="container">
-      <!--<div class="subheader-inner">
-        <h1>Menu v2</h1>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Menu</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Menu v2</li>
-          </ol>
-        </nav>
-      </div>-->
-
+<!-- Subheader Start -->
+<div class="subheader dark-overlay dark-overlay-2" style="background-image: url('assets/img/urunler.png')">
+  <div class="container">
+    <div class="subheader-inner">
+      <h1>Menülerimiz</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Menu</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Menu v2</li>
+        </ol>
+      </nav>
     </div>
+
   </div>
-  <!-- Subheader End -->
+</div>
+<!-- Subheader End -->
 
-  <!-- Menu Wrapper Start -->
-  <div class="section section-padding menu-v2">
-    <div class="container">
-
-
-      <div *ngFor="let c of category">
-        <div class="menu-category dark-overlay dark-overlay-2" style="background-image: url('assets/img/categories-lg/1.jpg')">
-          <h3>{{c.name}}</h3>
+<!-- Menu Wrapper Start -->
+<div class="section section-padding menu-v2">
+  <div class="container">
+    <div class="row">
+      <div class="col-6" *ngFor="let m of menus">
+        <div class="menu-category dark-overlay dark-overlay-2 menus"
+              (click)="getProducts(m)" [style.background-image]="getBackground(m.imageUrl)">
+          <h3>{{m.name}}</h3>
         </div>
-        <div class="row">
+      </div>
+    </div>
 
-
-          <div class="col-lg-4 col-md-6" *ngFor="let p of c.products">
-            <div class="product">
-              <a class="product-thumb" routerLink='/menu-item-v1'> <img src="assets/img/prods-sm/1.png" alt="menu item" /> </a>
-              <div class="product-body">
-                <div class="product-desc">
-                  <h4> <a routerLink='/menu-item-v1'>{{p.name}}</a> </h4>
-                </div>
-                <div class="product-controls">
-                  <a href="javascript:void(0)" class="order-item btn-custom btn-sm shadow-none">{{p.price}} ₺  </a>
-                  <mat-icon matTooltip="{{p.description}}" style="font-size: 30px;color: red;" matTooltipPosition="above" >info</mat-icon>
-                </div>
+    <div *ngFor="let c of category">
+      <div class="menu-category dark-overlay dark-overlay-2"
+           style="background-image: url('assets/img/categories-lg/1.jpg')">
+        <h3>{{c.name}}</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6" *ngFor="let p of c.products">
+          <div class="product">
+            <a class="product-thumb" routerLink='/menu-item-v1'> <img src="assets/img/prods-sm/1.png"
+                                                                      alt="menu item"/> </a>
+            <div class="product-body">
+              <div class="product-desc">
+                <h4><a routerLink='/menu-item-v1'>{{p.name}}</a></h4>
+              </div>
+              <div class="product-controls">
+                <a href="javascript:void(0)" class="order-item btn-custom btn-sm shadow-none">{{p.price}} ₺ </a>
+                <mat-icon matTooltip="{{p.description}}" style="font-size: 30px;color: red;"
+                          matTooltipPosition="above">info
+                </mat-icon>
               </div>
             </div>
           </div>
-
-
-
-
         </div>
+
       </div>
-
-
-
-
     </div>
+
+
   </div>
-  <!-- Menu Wrapper End -->
+</div>
+<!-- Menu Wrapper End -->
 <app-footer></app-footer>

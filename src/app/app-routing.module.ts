@@ -22,6 +22,7 @@ import { MenuTwoComponent } from './components/pages/menu-two/menu-two.component
 import { MenuItemOneComponent } from './components/pages/menu-item-one/menu-item-one.component';
 import { MenuItemTwoComponent } from './components/pages/menu-item-two/menu-item-two.component';
 import { ErrorComponent } from './components/pages/error/error.component';
+import {ProductComponent} from "./components/pages/product/product.component";
 
 
 const routes: Routes = [
@@ -87,6 +88,9 @@ const routes: Routes = [
   },
   {
     path:'menu-item-v2',component:MenuItemTwoComponent
+  },
+  {
+    path:'product/:id',component:ProductComponent
   },
   {
     path:'**',component:ErrorComponent

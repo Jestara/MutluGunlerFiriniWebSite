@@ -13,6 +13,7 @@ export class MenuTwoComponent implements OnInit {
   menus: any;
   product: any;
   image: any;
+  status: boolean;
 
   constructor(private service: MenuService,
               private router: Router,
@@ -20,18 +21,23 @@ export class MenuTwoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.status = true;
     this.service.getMenus().then((data) => {
       this.menus = data;
+      this.status = false;
     });
   }
 
   getProducts(p){
-    this.service.getCategory(p.id).then((data) => {
-      this.category = data;
-    })
+    this.router.navigate(['/product', p.id]);
   }
 
-  getBackground(image) {
+  getMenuBackground(image) {
+    let img = 'https://' + image;
+    return this.sanitizer.bypassSecurityTrustStyle(`url(${img})`);
+  }
+
+  getCategoryBackground(image) {
     let img = 'https://' + image;
     return this.sanitizer.bypassSecurityTrustStyle(`url(${img})`);
   }

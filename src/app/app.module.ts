@@ -42,6 +42,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MenuService} from "./services/menu.service";
 import {HttpClientModule} from "@angular/common/http";
 import {MaterialModule} from "./components/modules/material/material.module";
+import { ProductComponent } from './components/pages/product/product.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -77,7 +79,7 @@ import {MaterialModule} from "./components/modules/material/material.module";
     ErrorComponent,
     HeaderFourComponent,
     HeaderInnerComponent,
-
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +90,9 @@ import {MaterialModule} from "./components/modules/material/material.module";
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

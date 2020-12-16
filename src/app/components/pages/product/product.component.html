@@ -1,36 +1,13 @@
 <app-header></app-header>
-<!-- Subheader Start -->
-<div class="subheader dark-overlay dark-overlay-2" style="background-image: url('assets/img/menubg.png')">
-  <div class="container">
-    <div class="subheader-inner">
-      <h1>Menülerimiz</h1>
-<!--      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Menu</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Menu v2</li>
-        </ol>
-      </nav>-->
-    </div>
-  </div>
+<div class="h-25" >
+
 </div>
 <!-- Subheader End -->
 
-<!-- Menu Wrapper Start -->
 <div class="section section-padding menu-v2">
   <div class="container">
-      <mat-spinner *ngIf="status"></mat-spinner>
-    <div class="row">
-      <div class="col-6" *ngFor="let m of menus">
-        <div class="menu-category dark-overlay dark-overlay-2 menus"
-              (click)="getProducts(m)" [style.background-image]="getMenuBackground(m.imageUrl)">
-          <h3>{{m.name}}</h3>
-          <p>{{m.description}}</p>
-        </div>
-      </div>
-    </div>
-
-    <!--<div *ngFor="let c of category">
+    <mat-spinner *ngIf="status" strokeWidth="5"></mat-spinner>
+    <div *ngFor="let c of category">
       <div class="menu-category dark-overlay dark-overlay-2"
            [style.background-image]="getMenuBackground(c.imageUrl)">
         <h3>{{c.name}}</h3>
@@ -54,10 +31,9 @@
         </div>
 
       </div>
-    </div>-->
-
+    </div>
 
   </div>
 </div>
-<!-- Menu Wrapper End -->
+
 <app-footer></app-footer>

@@ -1,0 +1,18 @@
+mat-spinner{
+  display: flex;
+  position: absolute;
+  z-index: 111111;
+  margin: auto;
+  left: 50%;
+  top: -30px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

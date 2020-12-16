@@ -1902,7 +1902,7 @@ table img{
 ========================*/
 .ct-footer {
   background-color: #f9f9f9;
-  padding: 80px 0 0;
+  padding: 30px 0 0;
 }
 .ct-footer p{
   margin-bottom: 20px;
@@ -1918,7 +1918,7 @@ table img{
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .footer-middle a,
 .footer-middle i{
@@ -3193,6 +3193,12 @@ table img{
   top: 15px;
   opacity: 1;
   visibility: visible;
+}
+.footer-menu{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
 }
 .social-media {
   display: -webkit-box;

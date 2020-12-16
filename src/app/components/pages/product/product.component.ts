@@ -3,6 +3,7 @@ import {MenuService} from "../../../services/menu.service";
 import {ActivatedRoute} from "@angular/router";
 import {DomSanitizer} from "@angular/platform-browser";
 
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -11,7 +12,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 export class ProductComponent implements OnInit {
   category: any;
   status: boolean;
-
+  section: string;
 
   constructor(private service: MenuService,
               private route: ActivatedRoute,
@@ -32,5 +33,12 @@ export class ProductComponent implements OnInit {
     let img = 'https://' + image;
     return this.sanitizer.bypassSecurityTrustStyle(`url(${img})`);
   }
+
+  goTo(c){
+    this.section = c.toString();
+    console.log(this.section)
+    document.getElementById(this.section).scrollIntoView({behavior:"smooth"});
+  }
+
 
 }

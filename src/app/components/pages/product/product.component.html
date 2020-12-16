@@ -1,14 +1,20 @@
 <app-header></app-header>
-<div class="h-25" >
-
+<div class="head">
 </div>
 <!-- Subheader End -->
+<div class="container">
+  <mat-toolbar color="primary" *ngIf="status === false">
+    <mat-chip-list>
+      <mat-chip *ngFor="let c of category" (click)="goTo(c.id)" [(ngModel)]="section" name="section" ngDefaultControl color="warn" selected><mat-icon matChipAvatar>restaurant</mat-icon>{{c.name}}</mat-chip>
+    </mat-chip-list>
+  </mat-toolbar>
+</div>
 
 <div class="section section-padding menu-v2">
   <div class="container">
-    <mat-spinner *ngIf="status" strokeWidth="5"></mat-spinner>
+    <mat-spinner *ngIf="status"></mat-spinner>
     <div *ngFor="let c of category">
-      <div class="menu-category dark-overlay dark-overlay-2"
+      <div class="menu-category dark-overlay dark-overlay-2"  id="{{c.id}}"
            [style.background-image]="getMenuBackground(c.imageUrl)">
         <h3>{{c.name}}</h3>
       </div>
@@ -32,8 +38,13 @@
 
       </div>
     </div>
-
+    <div class="top-button">
+      <button mat-fab color="accent" class="back-to-top" aria-label="Example icon button with a bookmark icon">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+      </button>
+    </div>
   </div>
 </div>
+<div class="h-25"></div>
 
 <app-footer></app-footer>

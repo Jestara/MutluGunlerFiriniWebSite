@@ -16,3 +16,18 @@ mat-spinner{
 .example-full-width {
   width: 100%;
 }
+
+.top-button{
+  display: flex;
+  position: fixed;
+  margin: 0;
+  bottom: 50px;
+  right: 30px;
+}
+
+mat-toolbar{
+  border-radius: 10px;
+}
+.head{
+  margin-top: 150px;
+}

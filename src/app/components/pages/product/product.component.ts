@@ -36,7 +36,6 @@ export class ProductComponent implements OnInit {
 
   goTo(c){
     this.section = c.toString();
-    console.log(this.section)
     document.getElementById(this.section).scrollIntoView({behavior:"smooth"});
   }
 

@@ -4240,9 +4240,9 @@ td.quantity{
   margin: 0 auto;
 }
 .product:hover .product-thumb{
-  -webkit-transform: translateY(-5px);
+/*  -webkit-transform: translateY(-5px);
       -ms-transform: translateY(-5px);
-          transform: translateY(-5px);
+          transform: translateY(-5px);*/
 }
 
 .product .product-desc h4 a{
@@ -4437,6 +4437,7 @@ td.quantity{
 }
 .menu-category::before{
   border-radius: 8px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
 }
 .menu-category h3,
 .menu-category p{

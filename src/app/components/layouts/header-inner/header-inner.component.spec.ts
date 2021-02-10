@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HeaderInnerComponent } from './header-inner.component';
 
@@ -6,7 +6,7 @@ describe('HeaderInnerComponent', () => {
   let component: HeaderInnerComponent;
   let fixture: ComponentFixture<HeaderInnerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HeaderInnerComponent ]
     })

@@ -39,20 +39,20 @@ export class GalleryComponent implements OnInit {
   this.galleryOptions = [
       {
 
-          width: '80%',
-          height: '80%',
+          width: '100%',
+          height: '100%',
           thumbnailsColumns: 6,
           imageAnimation: NgxGalleryAnimation.Fade,
           previewDescription: false,
           imageSize:NgxGalleryImageSize.Contain,
-
+          thumbnailsSwipe: true
       },
       // max-width 800
       {
 
 
 
-          breakpoint: 800,
+
           imagePercent: 80,
           thumbnailsPercent: 20,
           thumbnailsMargin: 20,
@@ -61,9 +61,17 @@ export class GalleryComponent implements OnInit {
       // max-width 400
       {
 
+           width: '100%',
+           height: '100%',
+          // breakpoint: 400,
+          thumbnailsColumns: 3 ,
+          thumbnailsRows: 3,
+          thumbnailsPercent:500,
+          imageSize:NgxGalleryImageSize.Contain,
+          thumbnailsSwipe: true,
+          imagePercent:1000,
+          image:false
 
-          breakpoint: 400,
-          preview: false
       }
   ];
   }

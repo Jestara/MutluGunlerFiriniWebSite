@@ -1,4 +1,7 @@
+import { GalleryService } from './../../../services/gallery/gallery.service';
 import { Component, OnInit } from '@angular/core';
+import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryImageSize, NgxGalleryLayout, NgxGalleryOptions, NgxGalleryOrder} from 'ngx-gallery-9';
+import { Gallery } from 'src/app/models/Gallery';
 
 @Component({
   selector: 'app-gallery',
@@ -6,10 +9,63 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-
-  constructor() { }
+    images: Gallery[];
+    totalRecords: number;
+    page = 1;
+    galleryOptions: NgxGalleryOptions[];
+    galleryImages: any = [];
+  constructor(private galleryService: GalleryService) { }
 
   ngOnInit(): void {
+    this.getGalleryPhotos();
+  }
+
+
+  getGalleryPhotos(){
+    this.galleryService.getGallery().then((data) => {
+      this.images = data;
+      this.totalRecords = data.length;
+      for (const i in this.images) {
+          const obj = {
+              small: 'https://' + this.images[i].imageUrl,
+              medium: 'https://' + this.images[i].imageUrl,
+              big: 'https://' + this.images[i].imageUrl
+          };
+          this.galleryImages.push(obj);
+      }
+
+  });
+
+  this.galleryOptions = [
+      {
+
+          width: '80%',
+          height: '80%',
+          thumbnailsColumns: 6,
+          imageAnimation: NgxGalleryAnimation.Fade,
+          previewDescription: false,
+          imageSize:NgxGalleryImageSize.Contain,
+
+      },
+      // max-width 800
+      {
+
+
+
+          breakpoint: 800,
+          imagePercent: 80,
+          thumbnailsPercent: 20,
+          thumbnailsMargin: 20,
+          thumbnailMargin: 20
+      },
+      // max-width 400
+      {
+
+
+          breakpoint: 400,
+          preview: false
+      }
+  ];
   }
 
 }

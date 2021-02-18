@@ -39,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {MenuService} from "./services/menu.service";
+import {MenuService} from "./services/menu/menu.service";
 import {HttpClientModule} from "@angular/common/http";
 import {MaterialModule} from "./components/modules/material/material.module";
 import { ProductComponent } from './components/pages/product/product.component';
@@ -47,6 +47,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from 'ngx-pagination';
 import {NgxGalleryModule} from 'ngx-gallery-9';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +99,8 @@ import { GalleryComponent } from './components/pages/gallery/gallery.component';
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    MatGridListModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MenuService} from "../../../services/menu.service";
+import {MenuService} from "../../../services/menu/menu.service";
 import {Router} from "@angular/router";
 import {DomSanitizer, SafeHtml, SafeResourceUrl, SafeScript, SafeStyle, SafeUrl} from "@angular/platform-browser";
 

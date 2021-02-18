@@ -44,7 +44,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {MaterialModule} from "./components/modules/material/material.module";
 import { ProductComponent } from './components/pages/product/product.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import {NgxPaginationModule} from 'ngx-pagination';
+import {NgxGalleryModule} from 'ngx-gallery-9';
+import { GalleryComponent } from './components/pages/gallery/gallery.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +81,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ErrorComponent,
     HeaderFourComponent,
     HeaderInnerComponent,
-    ProductComponent
+    ProductComponent,
+    GalleryComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -92,7 +96,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     HttpClientModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
+    NgxGalleryModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

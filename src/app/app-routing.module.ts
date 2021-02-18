@@ -1,3 +1,4 @@
+import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
@@ -88,6 +89,9 @@ const routes: Routes = [
   },
   {
     path:'menu-item-v2',component:MenuItemTwoComponent
+  },
+  {
+    path:'galeri',component:GalleryComponent
   },
   {
     path:'product/:id',component:ProductComponent

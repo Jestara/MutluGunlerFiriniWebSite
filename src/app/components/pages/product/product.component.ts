@@ -23,6 +23,7 @@ export class ProductComponent implements OnInit {
     this.route.paramMap.subscribe((data) => {
       const id = data.get('id');
       this.service.getCategory(id).then((data) => {
+        console.log(data);
         this.category = data;
         this.status = false;
       })

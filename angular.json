@@ -39,8 +39,8 @@
               "src/assets/fonts/font-awesome/css/all.min.css",
               "node_modules/leaflet/dist/leaflet.css",
               "src/assets/css/style.css",
-              "src/styles.css",
-                "node_modules/font-awesome/css/font-awesome.css"
+              "src/styles.css"
+
             ],
             "scripts": [
               "src/assets/js/plugins/jquery-3.4.1.min.js",

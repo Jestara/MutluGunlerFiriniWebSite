@@ -48,6 +48,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {NgxGalleryModule} from 'ngx-gallery-9';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,6 +88,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     LeafletModule,

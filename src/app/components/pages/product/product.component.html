@@ -23,13 +23,13 @@
   <div  class="container">
     <mat-spinner *ngIf="status" strokeWidth="2"></mat-spinner>
     <div *ngFor="let c of category">
-      <div class="menu-category dark-overlay dark-overlay-2"  id="{{c.id}}"
+      <div class="menu-category dark-overlay dark-overlay-2 boxShadow "  id="{{c.id}}"
            [style.background-image]="getMenuBackground(c.imageUrl)">
         <h3>{{c.name}}</h3>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-6" *ngFor="let p of c.products">
-          <div class="product">
+        <div class="col-lg-4 col-md-6 " *ngFor="let p of c.products">
+          <div class="product boxShadow">
             <a class="product-thumb"> <img src="https://{{p.imageUrl}}" alt="product"/> </a>
             <div class="product-body">
               <div class="product-desc">

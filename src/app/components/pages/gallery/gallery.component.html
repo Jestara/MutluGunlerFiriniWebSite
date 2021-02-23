@@ -1,5 +1,8 @@
 
  <app-header ></app-header>
+
+
+
 <div class="galleryBodyStyle">
 
 
@@ -8,11 +11,9 @@
 
 
 
-
-
-  <mat-grid-list cols="1" rowHeight="2:1" >
+  <mat-grid-list cols="1" rowHeight="1:1" >
     <mat-grid-tile>
-        <ngx-gallery [options]="galleryOptions" [images]="galleryImages" ></ngx-gallery>
+        <ngx-gallery [options]="galleryOptions" [images]="galleryImages.reverse()" ></ngx-gallery>
     </mat-grid-tile>
 </mat-grid-list>
 
@@ -25,4 +26,4 @@
 
 
 </div>
-<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->

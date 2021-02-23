@@ -5,7 +5,7 @@
 <div class="container" >
 
     <mat-chip-list  >
-      <mat-chip *ngFor="let c of category" (click)="goTo(c.id)" [(ngModel)]="section" name="section" ngDefaultControl style="background-color: #ED4E53;margin-top: 10px;margin-bottom: 10px;" selected>
+      <mat-chip *ngFor="let c of category" (click)="goTo(c.id)" [(ngModel)]="section" name="section" ngDefaultControl  class="boxShadow" style="background-color: #ED4E53;margin-top: 10px;margin-bottom: 10px;" selected>
 
 
         <!-- <mat-icon matChipAvatar>restaurant</mat-icon> -->

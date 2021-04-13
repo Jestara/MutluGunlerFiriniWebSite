@@ -48,7 +48,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {NgxGalleryModule} from 'ngx-gallery-9';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import { MutlutvComponent } from './components/pages/mutlutv/mutlutv.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,6 +86,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HeaderInnerComponent,
     ProductComponent,
     GalleryComponent,
+    MutlutvComponent,
 
   ],
   imports: [
@@ -102,7 +104,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     FormsModule,
     NgxPaginationModule,
     NgxGalleryModule,
-    MatGridListModule
+    MatGridListModule,
+    MatExpansionModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

@@ -14,6 +14,7 @@ export class GalleryComponent implements OnInit {
     page = 1;
     galleryOptions: NgxGalleryOptions[];
     galleryImages: any = [];
+    status: boolean;
   constructor(private galleryService: GalleryService) { }
 
   ngOnInit(): void {
@@ -22,6 +23,7 @@ export class GalleryComponent implements OnInit {
 
 
   getGalleryPhotos(){
+    this.status = true;
     this.galleryService.getGallery().then((data) => {
       this.images = data;
       this.totalRecords = data.length;
@@ -33,6 +35,7 @@ export class GalleryComponent implements OnInit {
           };
           this.galleryImages.push(obj);
       }
+      this.status = false;
 
   });
 

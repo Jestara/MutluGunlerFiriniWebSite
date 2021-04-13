@@ -1,3 +1,4 @@
+import { MutlutvComponent } from './components/pages/mutlutv/mutlutv.component';
 import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -92,6 +93,9 @@ const routes: Routes = [
   },
   {
     path:'galeri',component:GalleryComponent
+  },
+  {
+    path:'mutlutv',component:MutlutvComponent
   },
   {
     path:'product/:id',component:ProductComponent

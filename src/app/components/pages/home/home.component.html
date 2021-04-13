@@ -51,6 +51,46 @@
 
 </div>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+
+        <div class="col-lg-4" *ngFor="let p of posts">
+          <article class="post">
+            <h2 class="title">{{p.title}}</h2>
+              <div class="post-thumbnail">
+              <img *ngIf="p.imageUrl && p.imageUrl != 'null'" src="https://{{p.imageUrl}}" style="height: 150px;width: 300px;border-radius: 15px;" alt="Mutlu Günler Fırını">
+
+                <iframe *ngIf="p.videoUrl && p.videoUrl != 'null'" style="border-radius: 15px;" class="videoStyle" [src]="changeVideoUrl(p)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <div class="post-desc">
+              <p>{{p.description}}</p>
+            </div>
+
+
+          </article>
+        </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        </div>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
 <!-- Banner End -->
 <!-- Products Start -->
 <!--<div class="section products-section">

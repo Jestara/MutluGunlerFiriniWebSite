@@ -1,0 +1,33 @@
+
+ <app-header ></app-header>
+<br>
+<br>
+<br>
+ <div class="container">
+  <mat-spinner *ngIf="isLoading" strokeWidth="2"></mat-spinner>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row" *ngIf="mutluTvs">
+
+        <div class="col-lg-4" *ngFor="let mutluTV of mutluTvs">
+          <article class="post">
+
+              <div class="post-thumbnail">
+
+                <iframe *ngIf="mutluTV.videoUrl && mutluTV.videoUrl != 'null'" style="border-radius: 15px;" class="videoStyle" [src]="changeVideoUrl(mutluTV)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <div class="post-desc">
+              <p>{{mutluTV.description}}</p>
+            </div>
+
+
+          </article>
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+
+ <app-footer></app-footer>

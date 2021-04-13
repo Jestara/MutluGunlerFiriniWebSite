@@ -2,27 +2,84 @@
 <div class="head">
 </div>
 <!-- Subheader End -->
-<div class="container" >
+<!-- <div class="container" >
+  <div class="row">
 
-    <mat-chip-list  >
+    <div class="col-lg-12">
+
+    <div class="row" >
+
+
+      <div class="col-lg-12" *ngFor="let c of category">
+        <div class="menu-category dark-overlay dark-overlay-2 boxShadow "  id="{{c.id}}"
+             [style.background-image]="getMenuBackground(c.imageUrl)">
+          <h3>{{c.name}}</h3>
+        </div>
+    </div>
+
+    </div>
+
+  </div>
+    <!-- <mat-chip-list  >
       <mat-chip *ngFor="let c of category" (click)="goTo(c.id)" [(ngModel)]="section" name="section" ngDefaultControl  class="boxShadow" style="background-color: #ED4E53;margin-top: 10px;margin-bottom: 10px;" selected>
 
 
         <!-- <mat-icon matChipAvatar>restaurant</mat-icon> -->
 
 
-        {{c.name}}
+        <!-- {{c.name}} -->
 
 
-      </mat-chip>
-    </mat-chip-list>
+      <!-- </mat-chip> -->
+    <!-- </mat-chip-list> -->
 
-</div>
+
+
+<!-- </div> -->
+
+
 
 <div class="section section-padding menu-v2">
   <div  class="container">
     <mat-spinner *ngIf="status" strokeWidth="2"></mat-spinner>
-    <div *ngFor="let c of category">
+
+    <mat-accordion >
+
+      <mat-expansion-panel expanded hideToggle *ngFor="let c of category" >
+        <mat-expansion-panel-header class="col-lg-12" [collapsedHeight]="'275px'" [expandedHeight]="'275px'" showToggle=false>
+
+            <div class="menu-category dark-overlay dark-overlay-2 boxShadow col-lg-12"  id="{{c.id}}"
+            [style.background-image]="getMenuBackground(c.imageUrl)">
+         <h3>{{c.name}}</h3>
+       </div>
+
+         </mat-expansion-panel-header>
+       <div class="row">
+        <div class="col-lg-4 col-md-6 " *ngFor="let p of c.products">
+          <div class="product boxShadow">
+             <img src="https://{{p.imageUrl}}" style="border-radius: 5px;" class="boxShadow" alt="Mutlu Günler Fırını"/>
+            <div class="product-body">
+              <div class="product-desc">
+                <h4><a>{{p.name}}</a></h4>
+              </div>
+              <div class="product-controls">
+                <a href="javascript:void(0)" class="order-item btn-custom btn-sm shadow-none boxShadow">{{p.price}} ₺ </a>
+                <mat-icon matTooltip="{{p.description}}" style="font-size: 30px;color: red;"
+                          matTooltipPosition="above">info
+                </mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </mat-expansion-panel>
+
+
+    </mat-accordion>
+
+
+    <!-- <div *ngFor="let c of category">
       <div class="menu-category dark-overlay dark-overlay-2 boxShadow "  id="{{c.id}}"
            [style.background-image]="getMenuBackground(c.imageUrl)">
         <h3>{{c.name}}</h3>
@@ -46,7 +103,7 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
   </div>
 </div>

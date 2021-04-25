@@ -47,7 +47,8 @@
               <li> <a routerLink='/legal'>Başlık</a> </li>
             </ul>
           </div>-->
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 footer-widget">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 footer-widget">
             <h5 class="widget-title">Sosyal Medya</h5>
             <ul class="social-media">
               <li> <a href="#" class="facebook"> <i class="fab fa-facebook-f"></i> </a> </li>
@@ -56,6 +57,19 @@
               <li> <a href="#" class="google"> <i class="fab fa-youtube"></i> </a> </li>
             </ul>
 
+
+          </div>
+
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 footer-widget" style="margin-left: 5%;">
+              <ngx-qrcode
+              [elementType]="elementType"
+              [value]="value"
+              cssClass="aclass"
+              errorCorrectionLevel="L">
+            </ngx-qrcode>
+
+            </div>
           </div>
         </div>
       </div>

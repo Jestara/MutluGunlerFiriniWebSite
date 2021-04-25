@@ -50,6 +50,7 @@ import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MutlutvComponent } from './components/pages/mutlutv/mutlutv.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 @NgModule({
   declarations: [
     AppComponent,
@@ -105,7 +106,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NgxPaginationModule,
     NgxGalleryModule,
     MatGridListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NgxQRCodeModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

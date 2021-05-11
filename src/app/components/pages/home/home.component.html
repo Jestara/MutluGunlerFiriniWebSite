@@ -23,14 +23,16 @@
                 <div class="banner-icon">
                   <i class="flaticon-calories"></i>
                   <div class="banner-icon-body">
-                    <h5>x</h5>
+                    <span style="font-size: 14px;font-weight: bold;">240</span>
+                    <br>
                     <span>Kalori</span>
                   </div>
                 </div>
                 <div class="banner-icon">
                   <i class="flaticon-bread-roll"></i>
                   <div class="banner-icon-body">
-                    <h5> x g</h5>
+                    <span style="font-size: 14px;font-weight: bold;">100 G</span>
+                    <br>
                     <span>Gramaj</span>
                   </div>
                 </div>
@@ -60,8 +62,10 @@
         <div class="col-lg-4" *ngFor="let p of posts">
           <article class="post">
             <h2 class="title">{{p.title}}</h2>
-              <div class="post-thumbnail">
-              <img *ngIf="p.imageUrl && p.imageUrl != 'null'" src="https://{{p.imageUrl}}" style="height: 150px;width: 300px;border-radius: 15px;" alt="Mutlu Günler Fırını">
+
+              <div class="post-thumbnail" >
+
+              <img *ngIf="p.imageUrl && p.imageUrl != 'null'" src="https://{{p.imageUrl}}" style="height: 150px;width: 300px;border-radius: 15px;" alt="Mutlu Günler Fırını" >
 
                 <iframe *ngIf="p.videoUrl && p.videoUrl != 'null'" style="border-radius: 15px;" class="videoStyle" [src]="changeVideoUrl(p)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -202,34 +206,36 @@
 </div>-->
 <!-- Products End -->
 <!-- About us start -->
+<!-- TODO: HAKKIMIZDA -->
 <div class="section">
   <div class="container">
     <div class="row align-items-center">
 
       <div class="col-lg-6 mb-lg-30 ct-single-img-wrapper">
-        <img src="assets/img/about1.png" alt="img">
+        <img src="assets/img/osmanli1.jpg" alt="Mutlu Günler Fırını">
+        <br>
+        <br>
+        <img src="assets/img/osmanli2.jpg" alt="Mutlu Günler Fırını">
         <div class="ct-dots"></div>
       </div>
       <div class="col-lg-6">
         <div class="section-title-wrap mr-lg-30">
-          <h5 class="custom-primary">Hakkımızda</h5>
-          <h2 class="title">1997 yılında başlar,</h2>
+          <h4 class="custom-primary" style="font-weight: bold;">Osmanlı'dan bize kalan bu miras...</h4>
+          <!-- <h2 class="title">1997 yılında başlar,</h2> -->
           <p class="subtitle">
-            Osman DURSUN ve ekibinin işçilikten, işverenliğe terfisi, Erzurum’un Pasinler ilçesinde ilk fırınlarını
-            kurar ve ta o zamanlarda yaptığı doğru hamlelerle geçecek olan yılların onu nasıl bir değer zincirinin
-            içerisinde bulunacağı ve hem fırıncılık sektörüne hem de unlu mamüllerdeki çeşitliliğe nasıl katkı
-            sağlayacağını daha o zamandan belli etmeye başlar...
+            Osmanlı'dan bizlere miras kalan bu geleneği, <b>Mutlu Günler Fırını</b>  olarak yıllardır devam ettirmekteyiz.
+      Bu zorlu günlerde sizlerin de desteğiyle,
+        tüm şubelerimizde <b>"Askıda Ekmek"</b> geleneğini devam ettirerek ihtiyaç sahiplerine ekmeklerini ulaştırmaya devam ediyoruz.
           </p>
-          <!--          <div class="signature">
-                      <img src="assets/img/signature.png" alt="signature">
-                    </div>-->
-          <a routerLink='/hakkimizda' class="btn-custom">Devamı..</a>
+         <!-- <a routerLink='/hakkimizda' class="btn-custom">Devamı..</a> -->
         </div>
       </div>
 
     </div>
   </div>
 </div>
+<br>
+<br>
 <!-- About us End -->
 
 <!-- Categories Start -->

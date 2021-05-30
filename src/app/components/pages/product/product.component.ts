@@ -11,23 +11,29 @@ import {DomSanitizer} from "@angular/platform-browser";
 })
 export class ProductComponent implements OnInit {
   category: any;
-  status: boolean;
-  section: string;
+  isLoading: boolean = false;
+  section?: string;
+  selectedCategoryProducts: any;
+  selectedCategoryId: number = 0;
 
   constructor(private service: MenuService,
               private route: ActivatedRoute,
               private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    this.status = true;
+    this.changeLoadingState();
     this.route.paramMap.subscribe((data) => {
       const id = data.get('id');
       this.service.getCategory(id).then((data) => {
-        console.log(data);
+
         this.category = data;
-        this.status = false;
+        this.selectedCategoryProducts = this.category[0].products;
+        this.selectedCategoryId = this.category[0].id;
+
       })
+
     });
+    this.changeLoadingState();
   }
 
   getMenuBackground(image) {
@@ -38,6 +44,15 @@ export class ProductComponent implements OnInit {
   goTo(c){
     this.section = c.toString();
     document.getElementById(this.section).scrollIntoView({behavior:"smooth"});
+  }
+  selectCategory(category: any){
+    this.selectedCategoryProducts = category.products;
+    this.selectedCategoryId = category.id;
+
+  }
+
+  changeLoadingState(){
+    this.isLoading = !this.isLoading;
   }
 
 

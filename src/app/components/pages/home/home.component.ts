@@ -18,10 +18,10 @@ export class HomeComponent implements OnInit {
   }
 
   getPosts(){
-    console.log('POSTS RESPONSE -->');
-      this.postsService.getPosts().subscribe((response) => {
+   // console.log('POSTS RESPONSE --> ');
+      this.postsService.getPosts().subscribe((response) =>{
         this.posts = response.reverse();
-        console.log(this.posts);
+        //console.log(this.posts);
       }, error => {
         console.log(error);
       } );
@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
 
   changeVideoUrl(post: Posts){
     return this.sanitizer.bypassSecurityTrustResourceUrl(post.videoUrl);
+
    }
 
 }

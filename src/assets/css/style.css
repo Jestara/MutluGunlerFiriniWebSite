@@ -2662,10 +2662,9 @@ table img{
 5. Subheader
 ========================*/
 .subheader{
-  margin-top:100px;
   background-size: cover;
   background-position: center;
-  min-height: 500px;
+  height: 200px;
   padding: 220px 0 40px;
   display: -webkit-box;
  display: -ms-flexbox;
@@ -4177,19 +4176,24 @@ td.quantity{
 
 /* 8.7. Menu Pages */
 .ct-menu-categories{
-  background-color: #ED4E53;
+  display: flex;
+  background-color: #212121;
   padding: 20px;
+  overflow-x:hidden ;
+
 }
 .ct-menu-category-item{
-  display: inline-block;
+  margin-left: 1%;
   text-align: center;
   cursor: pointer;
+
 }
 .ct-menu-category-item h6{
-  color: #fff;
+  color: #f9a825;
   margin: 0;
 }
 .menu-category-thumb{
+  height: 100px;
   width: 100px;
   border-radius: 50%;
   margin: 0 auto;
@@ -4197,8 +4201,8 @@ td.quantity{
   -o-transition: .3s;
   transition: .3s;
   margin-bottom: 10px;
-  border: 7px solid rgba(255,255,255,.2);
-  opacity: .4;
+  border: 4px solid rgba(255,255,255,.2);
+
 }
 .ct-menu-category-item:hover .menu-category-thumb,
 .ct-menu-category-item.active .menu-category-thumb{
@@ -4209,6 +4213,7 @@ td.quantity{
 }
 .menu-category-thumb img{
   border-radius: 50%;
+
 }
 .product{
   margin-bottom: 30px;

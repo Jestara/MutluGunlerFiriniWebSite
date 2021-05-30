@@ -48,7 +48,8 @@ export class GalleryComponent implements OnInit {
           imageAnimation: NgxGalleryAnimation.Fade,
           previewDescription: false,
           imageSize:NgxGalleryImageSize.Contain,
-          thumbnailsSwipe: true
+          thumbnailsSwipe: true,
+
       },
       // max-width 800
       {

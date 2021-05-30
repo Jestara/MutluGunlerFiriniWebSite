@@ -5,12 +5,33 @@
       <div class="footer-top">
         <div class="footer-logo">
           <img src="assets/img/logo-light.png" alt="logo">
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6  footer-widget">
+            <!-- <h5 class="widget-title">Sosyal Medya</h5> -->
+            <ul class="social-media">
+              <li> <a href="https://www.facebook.com/MGFeryaman" class="facebook" target="BLANK"> <i class="fab fa-facebook-f" ></i> </a> </li>
+              <li> <a href="https://www.instagram.com/mgferyaman/" class="pinterest" target="BLANK"> <i class="fab fa-instagram"></i> </a> </li>
+              <!-- <li> <a href="#" class="twitter"> <i class="fab fa-twitter" target="BLANK"></i> </a> </li> -->
+              <li> <a href="https://www.youtube.com/channel/UCDt1KoMYALjuEsPBc2YbUIQ" class="google" target="BLANK"> <i class="fab fa-youtube" ></i> </a> </li>
+            </ul>
         </div>
-<!--        <div class="footer-buttons">
-          <a href="#"> <img src="assets/img/android.png" alt="download it on the app store"></a>
-          <a href="#"> <img src="assets/img/ios.png" alt="download it on the app store"></a>
-        </div>-->
+        <div class="footer-copyright">
+          <p> Copyright &copy; 2021  Tüm Hakları Saklıdır. <a href="https://jestara.com/" target="BLANK">Developed by Jestara</a> </p>
+<!--          <a href="#" class="back-to-top">Yukarı<i class="fas fa-chevron-up"></i> </a>-->
+        </div>
+        </div>
+
       </div>
+      <div class="col-xl-6 col-lg-9 col-md-9 col-sm-12 footer-widget" style="margin-left: 5%;">
+        <ngx-qrcode
+        [elementType]="elementType"
+        [value]="value"
+        cssClass="aclass"
+        errorCorrectionLevel="L">
+      </ngx-qrcode>
+    </div>
     </div>
 
     <!-- Middle Footer -->
@@ -47,43 +68,24 @@
               <li> <a routerLink='/legal'>Başlık</a> </li>
             </ul>
           </div>-->
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 footer-widget">
-            <h5 class="widget-title">Sosyal Medya</h5>
-            <ul class="social-media">
-              <li> <a href="#" class="facebook"> <i class="fab fa-facebook-f"></i> </a> </li>
-              <li> <a href="#" class="pinterest"> <i class="fab fa-instagram"></i> </a> </li>
-              <li> <a href="#" class="twitter"> <i class="fab fa-twitter"></i> </a> </li>
-              <li> <a href="#" class="google"> <i class="fab fa-youtube"></i> </a> </li>
-            </ul>
 
 
-          </div>
 
 
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 footer-widget" style="margin-left: 5%;">
-              <ngx-qrcode
-              [elementType]="elementType"
-              [value]="value"
-              cssClass="aclass"
-              errorCorrectionLevel="L">
-            </ngx-qrcode>
-
-            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Footer Bottom -->
-    <div class="footer-bottom">
+    <!-- <div class="footer-bottom">
       <div class="container">
         <div class="footer-copyright">
-          <p> Copyright &copy; 2020  Tüm Hakları Saklıdır. <a href="https://jestara.com/" target="BLANK">Developed by Jestara</a> </p>
-<!--          <a href="#" class="back-to-top">Yukarı<i class="fas fa-chevron-up"></i> </a>-->
+          <p> Copyright &copy; 2021  Tüm Hakları Saklıdır. <a href="https://jestara.com/" target="BLANK">Developed by Jestara</a> </p>
+<!--          <a href="#" class="back-to-top">Yukarı<i class="fas fa-chevron-up"></i> </a>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </footer>
   <!-- Footer End -->

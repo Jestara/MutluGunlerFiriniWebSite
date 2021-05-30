@@ -5,3 +5,10 @@
   align-items: center;
 
 }
+
+ngx-gallery >>> .ngx-gallery-arrow {
+    color: #dd2c00;
+    font-size: 50px;
+}
+
+

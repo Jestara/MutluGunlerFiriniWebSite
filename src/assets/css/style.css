@@ -4011,6 +4011,8 @@ table img{
   padding-right: 40px;
 }
 .ct-contact-map-wrapper{
+  height: 500px;
+  width: 500px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

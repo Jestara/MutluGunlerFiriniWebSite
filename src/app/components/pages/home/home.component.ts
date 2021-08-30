@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   posts: Posts[];
+
   constructor(private postsService: PostsService,
     private sanitizer: DomSanitizer,) { }
 
@@ -21,14 +22,18 @@ export class HomeComponent implements OnInit {
    // console.log('POSTS RESPONSE --> ');
       this.postsService.getPosts().subscribe((response) =>{
         this.posts = response.sort((a,b) =>  b.id  - a.id);
-        console.log(this.posts);
+        // console.log(this.posts);
       }, error => {
         console.log(error);
       } );
   }
 
   changeVideoUrl(post: Posts){
-    return this.sanitizer.bypassSecurityTrustResourceUrl(post.videoUrl);
+    var split1 = post.videoUrl.split("embed",post.videoUrl.length)[1];
+    var videoId = split1.split("/",split1.length)[1];
+    // console.log('VIDEO ID -->', videoId);
+    return videoId;
+    // return this.sanitizer.bypassSecurityTrustResourceUrl(videoId);
 
    }
 

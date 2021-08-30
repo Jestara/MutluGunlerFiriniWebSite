@@ -52,6 +52,9 @@
   </div>
 </div> -->
 
+
+ <!-- PHOTO GRID VIEW -->
+
 <!-- <div class="container">
   <div class="section section-padding">
 
@@ -125,6 +128,9 @@
 
 </div> -->
 
+
+
+<!-- PHOTO GRID VIEW END -->
 <br>
 <br>
 <br>
@@ -148,12 +154,12 @@
           <article class="post">
             <h2 class="title">{{p.title}}</h2>
 
-              <div class="post-thumbnail" >
+              <div class="post-thumbnail" style="border-radius: 25px;padding: 0px;height: 200px;width: 350px;">
 
               <img *ngIf="p.imageUrl && p.imageUrl != 'null'" src="https://{{p.imageUrl}}" style="height: 150px;width: 300px;border-radius: 15px;" alt="Mutlu Günler Fırını" >
 
-                <iframe *ngIf="p.videoUrl && p.videoUrl != 'null'" style="border-radius: 15px;" class="videoStyle" [src]="changeVideoUrl(p)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                <!-- <iframe *ngIf="p.videoUrl && p.videoUrl != 'null'" style="border-radius: 15px;" class="videoStyle" [src]="changeVideoUrl(p)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <app-youtube-video-player [customVideoId]="changeVideoUrl(p)" *ngIf="p.videoUrl && p.videoUrl != 'null'"  ></app-youtube-video-player>
             </div>
             <div class="post-desc">
               <p>{{p.description}}</p>

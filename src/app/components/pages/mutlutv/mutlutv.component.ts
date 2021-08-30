@@ -23,7 +23,7 @@ export class MutlutvComponent implements OnInit {
     // console.log('MUTLUTV RESPONSE -->');
       this.mutluTVService.getMutluTVs().subscribe((response) => {
         this.mutluTvs = response.sort((a,b) =>  b.id  - a.id);
-        console.log(this.mutluTvs);
+        // console.log(this.mutluTvs);
       }, error => {
         // console.log(error);
       } );
@@ -31,7 +31,11 @@ export class MutlutvComponent implements OnInit {
   }
 
   changeVideoUrl(mutluTV: MutluTV){
-    return this.sanitizer.bypassSecurityTrustResourceUrl(mutluTV.videoUrl);
+    var split1 = mutluTV.videoUrl.split("embed",mutluTV.videoUrl.length)[1];
+    var videoId = split1.split("/",split1.length)[1];
+    // console.log('VIDEO ID -->', videoId);
+    return videoId;
+    // return this.sanitizer.bypassSecurityTrustResourceUrl(mutluTV.videoUrl);
    }
 
 }

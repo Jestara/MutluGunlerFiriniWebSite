@@ -12,9 +12,9 @@
         <div class="col-lg-4" *ngFor="let mutluTV of mutluTvs">
           <article class="post">
 
-              <div class="post-thumbnail">
+              <div class="post-thumbnail" style="border-radius: 25px;padding: 0px;height: 200px;width: 350px;">
 
-                <iframe *ngIf="mutluTV.videoUrl && mutluTV.videoUrl != 'null'" style="border-radius: 15px;" class="videoStyle" [src]="changeVideoUrl(mutluTV)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <app-youtube-video-player [customVideoId]="changeVideoUrl(mutluTV)" *ngIf="mutluTV.videoUrl && mutluTV.videoUrl != 'null'"  ></app-youtube-video-player>
 
             </div>
             <div class="post-desc">

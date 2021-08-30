@@ -51,6 +51,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MutlutvComponent } from './components/pages/mutlutv/mutlutv.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { YoutubeVideoPlayerComponent } from './components/youtube-video-player/youtube-video-player.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,10 +90,11 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
     ProductComponent,
     GalleryComponent,
     MutlutvComponent,
+    YoutubeVideoPlayerComponent,
 
   ],
   imports: [
-
+    YouTubePlayerModule,
     BrowserModule,
     AppRoutingModule,
     LeafletModule,

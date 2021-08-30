@@ -26,7 +26,7 @@ export class GalleryComponent implements OnInit {
     this.status = true;
     this.galleryService.getGallery().then((data) => {
       this.images = data.sort((a,b) => b.id - a.id );
-      console.log(this.images);
+      // console.log(this.images);
       this.totalRecords = this.images.length;
       for (const i in this.images) {
           const obj = {

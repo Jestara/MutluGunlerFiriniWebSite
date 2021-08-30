@@ -20,8 +20,8 @@ export class HomeComponent implements OnInit {
   getPosts(){
    // console.log('POSTS RESPONSE --> ');
       this.postsService.getPosts().subscribe((response) =>{
-        this.posts = response.reverse();
-        //console.log(this.posts);
+        this.posts = response.sort((a,b) =>  b.id  - a.id);
+        console.log(this.posts);
       }, error => {
         console.log(error);
       } );

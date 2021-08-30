@@ -1,4 +1,4 @@
 export interface Gallery {
-  Id: number;
+  id: number;
   imageUrl: string;
 }

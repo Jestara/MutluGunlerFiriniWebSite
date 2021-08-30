@@ -22,8 +22,8 @@ export class MutlutvComponent implements OnInit {
     this.isLoading = true;
     // console.log('MUTLUTV RESPONSE -->');
       this.mutluTVService.getMutluTVs().subscribe((response) => {
-        this.mutluTvs = response.reverse();
-        // console.log(this.mutluTvs);
+        this.mutluTvs = response.sort((a,b) =>  b.id  - a.id);
+        console.log(this.mutluTvs);
       }, error => {
         // console.log(error);
       } );
